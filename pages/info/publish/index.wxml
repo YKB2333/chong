@@ -1,0 +1,49 @@
+<!--pages/info/publish/index.wxml-->
+<view class="container">
+  <view class="header">
+    <view class="header_text">发布声明：平台内用户所发布的信息，与平台本身无关，平台只提供交流、发布及展示。如出现纠纷，平台不负任何责任！</view>
+  </view>
+  <view bindtap="settled" class="banner flex-bet">
+    <view class="banner_left">
+      <image class="banner_seller" src="../../images/dianpu.png"></image>
+    </view>
+    <view class="banner_center">
+      <view class="banner_font1">我是商家，入驻店铺</view>
+      <view class="banner_font2">暂未开放商家入驻，敬请期待！</view>
+    </view>
+    <view class="banner_right">
+      <image class="banner_seller" src="../../images/huise@2x.png"></image>
+    </view>
+  </view>
+  <view class="select">
+    <text class="select_text">—————  请选择您要发布的分类  —————</text>
+  </view>
+  <view class="cate-content">
+    <view class="cate-wrapper cate_style__11">
+      <scroll-view class="clear" scroll-y="true" style="height: {{ scrollHeight - 10 }}px; ">
+        <view wx:for="{{4}}">
+          <view class="cate-item">
+            <view catchtap="selectNav">
+              <image mode="widthFix" src="/images/zhan.jpg"></image>
+              <view class="cate-name">分类名称</view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <view wx:if="{{ !list.length && notcont }}">
+    <view class="yoshop-notcont">
+      <text class="iconfont icon-wushuju"></text>
+      <text class="cont">亲，暂无分类哦</text>
+    </view>
+  </view>
+</view>
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheet">
+  <block wx:for="{{2}}" wx:key="cit">
+    <navigator url="../publish/category">
+    <action-sheet-item bindtap="selectCat">二级分类</action-sheet-item>
+    </navigator>
+  </block>
+  <action-sheet-cancel>取消</action-sheet-cancel>
+</action-sheet>

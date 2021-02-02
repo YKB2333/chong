@@ -1,0 +1,53 @@
+<!--pages/user/index.wxml-->
+<!-- 用户信息 -->
+<view class="user-card">
+  <view class="ty-bg"></view>
+  <view class="user-box">
+    <view class="user-header">
+      <view class="user-avatar">
+        <image mode="aspectFill" src="/images/zhan.jpg"></image>
+      </view>
+      <view class="user-c">
+        <view class="user-username">记忆代码</view>
+        <view class="user-uid">uid:451237</view>
+      </view>
+    </view>
+    <view class="usercard-nav">
+      <view class="usercard-nav-li x">
+        <view class="t">￥10.00</view>
+        <view class="b">余额</view>
+      </view>
+      <view class="usercard-nav-li x">
+        <view class="t">13</view>
+        <view class="b">优惠券</view>
+      </view>
+      <view class="usercard-nav-li">
+        <view class="t">1200</view>
+        <view class="b">积分</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="main">
+  <view class="navbar">
+    <view class="navbar-category">我的工具</view>
+    <view class="navbar-box">
+      <navigator url="/pages/user/member/userdata" hover-class="navigator-hover">
+      <view class="navbar-item">
+        <view class="navbar-img">
+					<image src="/images/zhan.jpg"></image>
+				</view>
+				<view class="navbar-text">个人资料</view>
+      </view>
+    </navigator>
+    <navigator url="/pages/user/member/userset" hover-class="navigator-hover">
+      <view class="navbar-item">
+        <view class="navbar-img">
+					<image src="/images/zhan.jpg"></image>
+				</view>
+				<view class="navbar-text">帐号管理</view>
+      </view>
+    </navigator>
+    </view>
+  </view>
+</view>

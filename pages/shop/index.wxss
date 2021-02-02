@@ -1,0 +1,60 @@
+/* pages/shop/index.wxss */
+.head {    height: 320rpx;
+  z-index: 100;
+  position: relative;
+  overflow: hidden;}
+.shop-search {padding: 20rpx;}
+.shop-search input {height: 60rpx;flex: 1;color: #646464;padding-left: 20rpx;background: #f5f5f5;border-radius: 20rpx;}
+/* 幻灯片 */
+.slide {width: 100%;height:210rpx;margin-bottom: 20rpx;padding: 0 20rpx;}
+.slide swiper-item {width: 100%;border-radius:20rpx;height:190rpx;position: absolute;}
+.slide swiper-item image{width: 100%;height: 100%;border-radius:20rpx;}
+/* 导航栏 */
+.headnav {width: 100%;overflow: hidden;padding:0 20rpx;}
+.headnav-item {float: left;width: 20%;margin: 20rpx 0;}
+.headnav-img {width: 80rpx;height: 80rpx;margin: auto;}
+.headnav-img image {width: 100%;height: 100%;border-radius: 50%;}
+.headnav-text {font-size: 22rpx;margin-top: 20rpx;text-align: center;}
+.bubble {
+  padding: 5rpx 8rpx;
+  background-image: linear-gradient(45deg, #ff785c, #fc2b79) !important;
+  position: absolute;
+  margin-left: 60rpx;
+  border-radius:10rpx;
+  color: #fff;
+  font-size: 20rpx;
+  z-index: 2;
+  border: 2rpx solid #fff;
+}
+.bubble::after {
+  content: '';
+  position: absolute; 
+  margin-left: -50rpx;
+  top: 12rpx;
+  border-top: 20rpx solid #ff785c;
+  border-left: 16rpx solid transparent;
+  transform: rotate(-300deg);
+  z-index: -1;
+}
+.shop-list {padding: 20rpx;overflow: hidden;}
+.shop-item {padding: 20rpx;border-radius: 20rpx;margin-bottom: 20rpx;background: #fff;overflow: hidden;}
+.shop-images {float: left;margin-right: 20rpx;width: 30%;}
+.shop-img {width: 100%;}
+.shop-img image{width:100%;}
+.shop-main {float: left;width: 66%;overflow: hidden;}
+.shop-title {max-height: 70rpx;line-height: 36rpx;overflow: hidden;text-overflow: ellipsis;font-weight: 600;margin-bottom: 10rpx;}
+.shop-brand {padding: 0 6rpx;margin-right: 10rpx;background-image: linear-gradient(45deg, #ff785c, #fc2b79) !important;font-size: 20rpx;border-radius: 10rpx;color: #fff;}
+.shop-centre {overflow: hidden;height: 30rpx;line-height: 30rpx;}
+.shop-desc {font-size: 20rpx;color: #939393;}
+.shop-footer {
+  overflow: hidden;
+  margin-top: 70rpx;
+}
+.shop-price {font-size: 30rpx;font-weight: 600;color: #f00;margin-bottom: 10rpx;}
+.shop-price taxt{font-size: 18rpx;margin-right: 4rpx;}
+.qi {font-size: 20rpx!important;color: #939393;margin-left: 10rpx;font-weight: lighter;}
+.shop-foot {
+  font-size: 20rpx;color: #939393;
+}
+.shop-del {float: left;text-decoration:line-through;}
+.shop-pay {float: right;}

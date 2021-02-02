@@ -1,0 +1,48 @@
+<!--pages/info/publish/parm.wxml-->
+<view class="parm">
+  <view class="parm-item">
+    <view class="parm-name">年龄</view>
+    <view class="parm-list">
+      <text>未满月</text>
+      <text>30-45天</text>
+      <text class="choose">2个月</text>
+      <text>3个月</text>
+      <text>6个月</text>
+    </view>
+  </view>
+  <view class="parm-item">
+    <view class="parm-name">性别</view>
+    <view class="parm-list">
+      <text>公</text>
+      <text>母</text>
+      <text class="choose">公母均匀</text>
+    </view>
+  </view>
+  <view class="parm-item">
+    <view class="parm-name">驱虫状况</view>
+    <view class="parm-list">
+      <text>未驱虫</text>
+      <text class="choose">已驱虫</text>
+    </view>
+  </view>
+  <view class="parm-item">
+    <view class="parm-name">疫苗状况</view>
+    <view class="parm-list">
+      <text>不包疫苗</text>
+      <text>1针疫苗</text>
+      <text class="choose">2针疫苗</text>
+      <text>3针疫苗</text>
+    </view>
+  </view>
+  <view class="parm-item">
+    <view class="parm-name">价格（单价：元）</view>
+    <view class="parm-list">
+      <input placeholder="3000">3000</input>
+    </view>
+  </view>
+</view>
+<view class="button">
+  <view class="btn">
+    <view catchtap="submit">选好了</view>
+  </view>
+</view>

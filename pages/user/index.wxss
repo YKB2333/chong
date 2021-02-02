@@ -1,0 +1,26 @@
+/* pages/user/index.wxss */
+/*用户卡片栏 */
+.user-card {height: 320rpx;z-index: 100;position: relative;padding: 20rpx;margin-bottom: 20rpx;overflow: hidden;}
+.user-box {background: #fff;width: 100%;padding:30rpx 20rpx;height: 300rpx;margin: auto;z-index: 100;-webkit-box-sizing: border-box;box-sizing: border-box;border-radius:20rpx;}
+.user-header {overflow: hidden;}
+.user-avatar {float: left;width: 90rpx;height: 90rpx;border-radius:50%;}
+.user-avatar image{width:100%;height:100%;border-radius:50%;}
+.user-c {float: left;margin-left: 20rpx;}
+.user-username {font-size: 28rpx;font-weight:bold;height: 50rpx;line-height:50rpx;}
+.user-uid {font-size: 20rpx;color: #939393;height: 40rpx;line-height:40rpx;}
+.user-right {float: right;}
+.usercard-nav {display:flex;margin-top: 90rpx;width: 100%;}
+.usercard-nav-li {width: 33%;text-align: center;}
+.t {font-size: 28rpx;height: 30rpx;line-height: 30rpx;}
+.b {font-size: 20rpx;color: #939393;height: 30rpx;line-height: 30rpx;margin-top: 10rpx;}
+.x {border-right: 1rpx solid #e6e6e6;height: 60rpx;}
+
+/* 会员页导航栏 */
+.main {padding: 0 20rpx;}
+.navbar {padding:20rpx;background: #fff;margin-bottom: 20rpx;border-radius:20rpx;overflow: hidden;}
+.navbar-category {font-weight: bold;margin-bottom: 20rpx;font-size: 26rpx;border-bottom: 1rpx solid #e6e6e6;padding-bottom: 20rpx;}
+.navbar-box {overflow: hidden;padding: 20rpx 0;}
+.navbar-item {float: left;height: 100%;width:25%;}
+.navbar-img {width: 60rpx;height: 60rpx;margin: auto;}
+.navbar-img image{width:100%;height:100%;border-radius:50%;}
+.navbar-text {font-size: 22rpx;margin-top: 20rpx;text-align: center;}

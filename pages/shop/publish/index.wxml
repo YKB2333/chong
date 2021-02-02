@@ -1,0 +1,57 @@
+<!--pages/shop/publish/index.wxml-->
+<view class="form-wapr margin-bottom">
+  <view class="form-group border-bottom">
+    <view class="form-group-name">选择宝贝</view>
+    <view class="iconfont icon-gengduo form-group-icon"></view>
+    <view class="form-group-title">
+      小宠肠胃宝
+    </view>
+  </view>
+</view>
+<view class="form-wapr margin-bottom">
+  <view class="form-group-imgs-name">
+    <view class="form-group-imgs-left">宝贝图片</view>
+    <view class="form-group-imgs-right">3/4</view>
+  </view>
+  <view class="form-group-imgs">
+    <view class="form-group-imgs-item" wx:for="{{3}}">
+      <image mode="aspectFill" src="/images/zhan.jpg"></image>
+    </view>
+    <view class="solids">
+      <text class="cuIcon-cameraadd"></text>
+    </view>
+  </view>
+</view>
+<view class="form-wapr">
+  <view class="form-textarea">
+    <textarea placeholder="输入营销语或产品介绍"></textarea>
+  </view>
+  <view class="form-group">
+    <view class="form-group-name">成交价格</view>
+    <view class="iconfont icon-gengduo form-group-icon"></view>
+    <view class="form-group-title">
+      ￥10.02
+    </view>
+  </view>
+  <view class="form-group">
+    <view class="form-group-name">上架数量</view>
+    <view class="iconfont icon-gengduo form-group-icon"></view>
+    <view class="form-group-title">
+      1000/件
+    </view>
+  </view>
+  <view class="form-group">
+    <view class="form-group-name">发货地区</view>
+    <view class="iconfont icon-gengduo form-group-icon"></view>
+    <view class="form-group-title">
+      浙江 绍兴
+    </view>
+  </view>
+</view>
+
+
+<view class="button">
+  <view class="btn">
+    <view catchtap="submit" disabled="{{disable}}">确定发布</view>
+  </view>
+</view>

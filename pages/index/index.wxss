@@ -1,0 +1,39 @@
+/**index.wxss**/
+@import '/template/follow/index.wxss';
+@import '/template/info/index.wxss';
+@import '/template/trends/index.wxss';
+/* 自定义窗口 */
+custom {display: block;position: relative;}
+custom bar {padding-right: 110px;box-shadow: 0px 0px 0px !important;}
+.fixed {position: fixed;width: 100%;top: 0;z-index: 1024;box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);}
+.custom-bg {background: #fbc506;} 
+.action {display: flex;align-items: center;height: 100%;max-width: 100%;}
+.swiper-tab {display:flex;height:100%;margin-left: 20rpx;align-items:center;}
+.swiper-tab-item {margin-right: 40rpx;font-size:28rpx;}
+.active {font-size:36rpx;font-weight: bold;}
+/* 顶部 */
+.header {overflow: hidden;position: fixed;z-index: 1024;width: 100%;}
+/* 搜索框 */
+.search-box {background: #fbc506;padding: 20rpx;overflow: hidden;}
+.search {width: 75%;float: left;}
+.search input {height: 60rpx;flex: 1;color: #646464;padding-left: 20rpx;background: #f5f5f5;border-radius: 20rpx;}
+.search-box-r {width: 25%;height: 60rpx;line-height: 60rpx;float: left;}
+.search-item {text-align: right;width: 50%;float: left;}
+/* 发布栏 */
+.publish {overflow: hidden;background:#fbc506;padding: 0 10rpx;height:130rpx;}
+.publish-item {float: left;height: 100%;width: 25%;margin: 10rpx 0;}
+.publish-img {width: 60rpx;height: 60rpx;margin: auto;}
+.publish-img image {width: 100%;height: 100%;}
+.publish-text {margin-top: 10rpx;text-align: center;font-weight: 600;}
+/* 导航栏 */
+.headnav {width: 100%;background: linear-gradient(#fff, #f5f5f5);overflow: hidden;padding: 20rpx;}
+.headnav-item {float: left;width: 20%;margin: 20rpx 0;}
+.headnav-img {width: 80rpx;height: 80rpx;margin: auto;}
+.headnav-img image {width: 100%;height: 100%;border-radius: 50%;}
+.headnav-text {font-size: 22rpx;margin-top: 20rpx;text-align: center;}
+.bubble {padding: 5rpx 8rpx;background-image: linear-gradient(45deg, #ff785c, #fc2b79) !important;position: absolute;top: 30rpx;margin-left: 60rpx;border-radius:10rpx;color: #fff;font-size: 20rpx;z-index: 2;border: 2rpx solid #fff;}
+.bubble::after {content: '';position: absolute; margin-left: -50rpx;top: 12rpx;border-top: 20rpx solid #ff785c;border-left: 16rpx solid transparent;transform: rotate(-300deg);z-index: -1;}
+/* 幻灯片 */
+.slide {width: 100%;height:190rpx;margin-bottom: 20rpx;padding: 0 30rpx;}
+.slide swiper-item {width: 100%;border-radius:20rpx;height:190rpx;position: absolute;}
+.slide swiper-item image{width: 100%;height: 100%;border-radius:20rpx;}

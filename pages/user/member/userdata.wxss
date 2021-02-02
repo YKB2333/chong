@@ -1,0 +1,86 @@
+/* pages/user/member/userdata.wxss */
+
+.form-group-right {
+    float: right;
+}
+
+.form-group-avatar {
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+    margin-top: 14rpx;
+}
+
+.form-group-avatar image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.form-group-textarea {
+    margin-top: -20rpx;
+    width: 100%;
+    height: 150rpx;
+    background: #f2f2f4;
+    border-radius: 10rpx;
+}
+
+.form-group-textarea textarea {
+    width: 100%;
+    height: 150rpx;
+    padding: 10rpx 5rpx;
+}
+
+.name-box {
+    background-color: rgb(240, 240, 242);
+    padding: 40rpx 0 0;
+    border-radius: 20rpx;
+    overflow: hidden;
+}
+
+
+/* .name-popup{
+    width: 70%;
+} */
+
+.name-title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 32rpx;
+    margin-bottom: 20rpx;
+}
+
+.name-warn {
+    padding: 0 80rpx;
+    text-align: center;
+    white-space: nowrap;
+    margin-bottom: 40rpx;
+}
+
+.name_input {
+    margin: 0 auto;
+    width: 80%;
+    padding: 0 20rpx;
+    border: 2rpx solid rgb(199, 199, 199);
+    border-radius: 14rpx;
+}
+
+.btn-box {
+    display: flex;
+    height: 80rpx;
+    border-top: 1rpx solid rgb(199, 199, 199);
+    margin-top: 20rpx;
+}
+
+.btn-box view {
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    width: 50%;
+    color: rgb(48, 114, 245);
+}
+
+.color-blue {
+    color: rgb(48, 114, 245);
+    font-weight: 400;
+}

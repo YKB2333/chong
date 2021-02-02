@@ -1,0 +1,85 @@
+<!--template/trends/index.wxml-->
+<template name="trends">
+  <view class="cd-list">
+    <!-- 循环 -->
+    <view class="cd-item">
+      <view class="cd-head">
+        <view class="cd-avatar">
+          <image mode="aspectFill" src="/images/zhan.jpg"></image>
+        </view>
+        <view class="cd-centre">
+          <view class="cd-nickname">
+            <text>DY.锋</text>
+          </view>
+          <view class="cd-info">距离≈237km</view>
+        </view>
+        <view class="cd-follow">
+          <view class="cd-follow-button">加关注</view>
+        </view>
+      </view>
+      <view class="cd-wrap">
+        <view class="cd-title">好萌的狗狗！</view>
+        <view class="cd-images">
+          <view class="cd-img" wx:for="{{3}}" wx:if="{{index<3}}">
+            <image mode="aspectFill" src="/images/zhan.jpg"></image>
+          </view>
+        </view>
+        <view class="cd-area">
+          <view class="cd-place">{{item.province}} · {{item.city}}</view>
+          <view class="cd-dis">距离您 ≈{{item.distance}}km</view>
+        </view>
+        <view class="cd-topic"><text>#宠物搞笑视频</text></view>
+      </view>
+      <view class="cd-footer">
+        <view class="cd-bg iconfont icon-zan">
+          <text>赞一下</text>
+        </view>
+        <view class="cd-bg iconfont icon-pinglun">
+          <text>快速评论</text>
+        </view>
+        <view class="cd-bg2 iconfont icon-sandian"></view>
+      </view>
+    </view>
+    <!-- 循环 -->
+    <view class="cd-item">
+      <view class="cd-head">
+        <view class="cd-avatar">
+          <image mode="aspectFill" src="/images/zhan.jpg"></image>
+        </view>
+        <view class="cd-centre">
+          <view class="cd-nickname">
+            <text>DY.锋</text>
+          </view>
+          <view class="cd-info">距离≈237km</view>
+        </view>
+        <view class="cd-follow">
+          <view class="cd-follow-button">加关注</view>
+        </view>
+      </view>
+      <view class="cd-wrap">
+        <view class="cd-title">好萌的狗狗！</view>
+        <view class="cd-video">
+          <video src="{{item.video_path}}" binderror="videoErrorCallback"
+            controls="{{controls}}" custom-cache="{{cache}}" object-fit='cover' autoplay='{{false}}'></video>
+          <view class="iconfont icon-video icon-bofang" wx:if='{{item.file_id!=fileIdCurrent}}'
+            data-file_id="{{item.file_id}}" data-Listh="{{item.list_h}}" data-itemH="{{item.itemHeight}}"
+            bindtap="playVideo"></view>
+        </view>
+        <view class="cd-area">
+          <view class="cd-place">{{item.province}} · {{item.city}}</view>
+          <view class="cd-dis">距离您 ≈{{item.distance}}km</view>
+        </view>
+        <view class="cd-topic"><text>#宠物搞笑视频</text></view>
+      </view>
+      <view class="cd-footer">
+        <view class="cd-bg iconfont icon-zan">
+          <text>125</text>
+        </view>
+        <view class="cd-bg iconfont icon-pinglun">
+          <text>12</text>
+        </view>
+        <view class="cd-bg2 iconfont icon-sandian"></view>
+      </view>
+    </view>
+  </view>
+</template>

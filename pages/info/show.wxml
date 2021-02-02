@@ -1,0 +1,138 @@
+<!--pages/info/show.wxml-->
+<!-- 自定义窗口 -->
+<custom>
+	<bar class="fixed" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+		<view class="custom-tab">
+			<view class="return iconfont icon-fanhui" bindtap="clickReturn"></view>
+			<view class="custom-text" wx:if="{{returnTitle}}" bindtap="clickReturn">信息详情</view>
+		</view>
+	</bar>
+</custom>
+<!-- 信息详情图组 -->
+<swiper class="slide" autoplay="true" interval="5000" duration="1000" circular="true" indicator-dots="true"
+	indicator-active-color="#eee">
+	<block wx:for="{{5}}" wx:for-item="it" wx:key="imgList">
+		<swiper-item>
+			<image mode="aspectFill" src="/images/zhan.jpg"></image>
+		</swiper-item>
+	</block>
+	<block wx:if="{{file_id}}">
+		<swiper-item>
+			<video id="myVideo_{{file_id}}" src="{{video_path}}" binderror="videoErrorCallback" controls="{{controls}}"
+				custom-cache="{{cache}}" object-fit='cover' show-center-play-btn="{{playBtn}}" autoplay='{{false}}'></video>
+		</swiper-item>
+	</block>
+</swiper>
+<!-- 信息详情 -->
+<view class="info-item">
+	<view class="info-head">
+		<view class="info-avatar">
+			<image mode="aspectFill" src="/images/zhan.jpg"></image>
+		</view>
+		<view class="info-centre">
+			<view class="info-nickname">
+				<text>记忆代码</text>
+			</view>
+			<view class="info-intro">
+				<text>2020-11-16</text>
+			</view>
+		</view>
+		<view class="info-right">
+			<view class="info-category">萌宠找家</view>
+		</view>
+	</view>
+	<view class="info-main">
+		<view class="info-cont">出售3个月拉布拉多，公母均有 欢迎上门选购</view>
+		<view class="info-frame1">
+			<view class="info-price">价格：<text>1000</text></view>
+			<view class="info-pam">
+        参数：<text>公母均有</text>
+        <text>1-3个月</text>
+        <text>2针疫苗</text>
+        <text>已驱虫</text>
+			</view>
+		</view>
+		<view class="info-frame">
+			<view class="info-box">
+				<view class="info-box-left">
+					<map longitude="{{longitude}}" latitude="{{latitude}}" 
+						markers="{{markers}}" enable-scroll="{{scroll}}">
+						<cover-view slot="callout">
+							<block>
+								<cover-view  class="customCallout" marker-id="{{customCalloutMarkerId}}" >
+								</cover-view>
+							</block>
+						</cover-view>
+					</map>
+				</view>
+			</view>
+		</view>
+		<view class="info-views">浏览 1208</view>
+	</view>
+	<view class="foot">
+		<view class="foot-left">
+			<view class="foot-like iconfont icon-zan"></view>
+			<view class="foot-like foot-likes">1238</view>
+		</view>
+		<view class="foot-c">
+			<view class="foot-item" wx:for="{{6}}">
+				<view class="foot-avatar">
+					<image src="/images/zhan.jpg"></image>
+				</view>
+			</view>
+		</view>
+		<view class="foot-right">
+			<view class="foot-more">更多</view>
+		</view>
+	</view>
+</view>
+
+<!-- 评论列表 -->
+<view class="comment">
+	<view class="comment-lm">
+		<view class="comment-name">评论<text>（125条）</text></view>
+	</view>
+	<view class="comment-item" wx:for="{{10}}">
+		<view class="comment-left">
+			<view class="comment-avatar">
+				<image mode="aspectFill" src="/images/zhan.jpg"></image>
+			</view>
+		</view>
+		<view class="comment-right">
+			<view class="comment-username">
+				<text>记忆代码</text>
+			</view>
+			<view class="comment-cont">这东西很好，还有吗</view>
+			<view class="comment-foot">
+				<view class="comment-time">2020-11-16</view>
+			</view>
+		</view>
+	</view>
+</view>
+
+
+
+
+<view class="footer-fixed">
+	<view class="footer-fixed-l" bindtap="handleShow" data-target="bottomModal" data-uid="0" data-pid="0">
+		<text>说点什么吧…</text>
+	</view>
+	<view class="footer-fixed-r">
+		<view bindtap="flowHome" class="footer-fixed-icon">
+			<view class="iconfont footer-icon icon-shouye"></view>
+			<text>首页</text>
+		</view>
+		<view class="footer-fixed-icon" wx:if="{{collectionStatus}}">
+			<view class="iconfont footer-icon icon-xinaixin-fuben"></view>
+			<text>已赞</text>
+		</view>
+		<view class="footer-fixed-icon" data-id="{{id}}" catchtap="docollected" wx:else>
+			<view class="iconfont footer-icon icon-xinaixin"></view>
+			<text>点赞</text>
+		</view>
+		<view class="footer-fixed-icon">
+			<view class="iconfont footer-icon icon-iconcopy"></view>
+			<text>想要</text>
+		</view>
+	</view>
+</view>

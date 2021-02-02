@@ -1,0 +1,46 @@
+<!--pages/user/member/userset.wxml-->
+<view class="form-wapr margin-bottom">
+  <view class="form-group">
+    <view class="form-group-name">帐号</view>
+    <view class="iconfont icon-gengduo form-group-icon"></view>
+    <view class="form-group-title">
+      <text>451237</text>
+    </view>
+  </view>
+  <view class="form-group border-bottom">
+    <view class="form-group-name">密码</view>
+    <view class="iconfont icon-gengduo form-group-icon"></view>
+    <view class="form-group-title">
+      修改密码
+    </view>
+  </view>
+</view>
+<view class="form-wapr">
+  <view class="form-group">
+    <view class="form-group-name">微信</view>
+    <view class="iconfont icon-gengduo form-group-icon"></view>
+    <view class="form-group-title">
+      请绑定微信帐号
+    </view>
+  </view>
+  <view class="form-group">
+    <view class="form-group-name">QQ号</view>
+    <view class="iconfont icon-gengduo form-group-icon"></view>
+    <view class="form-group-title">
+      请绑定QQ帐号
+    </view>
+  </view>
+  <view class="form-group">
+    <view class="form-group-name">手机</view>
+    <view class="iconfont icon-gengduo form-group-icon"></view>
+    <view class="form-group-title">
+      13712345678
+    </view>
+  </view>
+</view>
+
+<view class="button">
+  <view class="btn">
+    <view catchtap="submit" disabled="{{disable}}">提交保存</view>
+  </view>
+</view>

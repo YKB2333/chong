@@ -1,0 +1,88 @@
+<!--template/follow/index.wxml-->
+<template name="follow">
+  <view class="follow-list">
+    <!--商品top-->
+    <view class="follow-item">
+      <view class="follow-head">
+        <view class="follow-logo">
+          <image mode="aspectFill" src="https://www.zgour.com/upload/goods_brand/5f51d20351bcf.png"></image>
+        </view>
+        <view class="follow-centre">
+          <view class="follow-name">
+            <text>宠岛U品榜</text>
+          </view>
+          <view class="follow-brand">
+            <text>一周人气品牌：</text>
+          </view>
+        </view>
+        <view class="follow-right">
+          <view class="follow-right-button button-yellow">更多宠物用品</view>
+        </view>
+      </view>
+      <view class="follow-wrap">
+        <scroll-view scroll-x>
+          <view class="follow-img" wx:for="{{10}}">
+            <image mode="aspectFill" src="https://www.zgour.com/upload/images/admin/20200613/5ee4ccd952735.jpg">
+            </image>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+    <!--关注话题-->
+    <view class="follow-item">
+      <view class="follow-head">
+        <view class="follow-logo">
+          <image mode="aspectFill" src="https://www.zgour.com/upload/goods_brand/5f51d20351bcf.png"></image>
+        </view>
+        <view class="follow-centre">
+          <view class="follow-name">
+            <text>萌宠搞笑视频</text>
+          </view>
+          <view class="follow-brand">
+            <text>24小时人气王：</text>
+          </view>
+        </view>
+        <view class="follow-right">
+          <view class="follow-right-button button-blue">更多动态话题</view>
+        </view>
+      </view>
+      <view class="follow-wrap">
+        <scroll-view scroll-x>
+          <view class="follow-img" wx:for="{{10}}">
+            <image mode="aspectFill" src="https://www.zgour.com/upload/images/admin/20200613/5ee4ccd952735.jpg">
+            </image>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+    <!--关注用户-->
+    <view class="follow-item">
+      <view class="follow-head">
+        <view class="follow-logo">
+          <image mode="aspectFill"
+            src="https://thirdwx.qlogo.cn/mmopen/vi_32/kZMvJSxM5wWhf6secnGCDKlApj7yDJicXhfFt8ysLeuydzicTbEAj9nQh8z51VIyewhTXkGrORvgicfnWU3fwuUIw/132">
+          </image>
+        </view>
+        <view class="follow-centre">
+          <view class="follow-name">
+            <text>记忆代码</text>
+          </view>
+          <view class="follow-brand">
+            <text>一周人气品牌：</text>
+          </view>
+        </view>
+        <view class="follow-right">
+          <view class="follow-right-button button-red">查看个人主页</view>
+        </view>
+      </view>
+      <view class="follow-wrap">
+        <scroll-view scroll-x>
+          <view class="follow-img" wx:for="{{10}}">
+            <image mode="aspectFill" src="https://www.zgour.com/upload/images/admin/20200613/5ee4ccd952735.jpg">
+            </image>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,61 @@
+<!--pages/shop/index.wxml-->
+<view class="head">
+  <view class="shop-bg"></view>
+  <view class="shop-search">
+    <input type="text" placeholder="请输入搜索内容" />
+  </view>
+  <view class="slide-box">
+    <!--幻灯片-->
+    <swiper class="slide" autoplay="true" interval="5000" duration="500" circular="true" indicator-dots="true"
+      indicator-active-color="#fff">
+      <block>
+        <swiper-item wx:for="{{4}}">
+          <image
+            src='https://imgcps.jd.com/ling4/7338639/5Lqs6YCJ5aW96LSn/5L2g5YC85b6X5oul5pyJ/p-5c11d16482acdd181dbc1fc9/d3dd0afa/cr_1125x445_0_171/s1125x690/q70.jpg'>
+          </image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+</view>
+<view class="headnav">
+			<view class="headnav-item" wx:for="{{5}}">
+				<view class="headnav-img">
+				  <view class="bubble">活动</view>
+					<image src='https://www.zgour.com/upload/goods_brand/5f51d20351bcf.png'></image>
+				</view>
+				<view class="headnav-text">导航名称</view>
+			</view>
+		</view>
+<view class="main">
+  <view class="shop-list">
+    <view class="shop-item" wx:for="{{10}}">
+      <view class="shop-images">
+        <view class="shop-img">
+          <image mode="widthFix" src="https://www.zgour.com/upload/product/5f21ae084ee61.jpg">
+          </image>
+        </view>
+      </view>
+      <view class="shop-main">
+        <view class="shop-title">
+          <taxt class="shop-brand">小宠</taxt>
+          小宠肠胃宝 10包/盒
+        </view>
+        <view class="shop-centre">
+          <view class="shop-desc">调理肠胃 促进消化</view>
+        </view>
+        <view class="shop-footer">
+          <view class="shop-price">
+            <taxt>￥</taxt>100<taxt class="qi">起</taxt>
+          </view>
+          <view class="shop-foot">
+            <view class="shop-del">
+              <taxt>￥</taxt>100
+            </view>
+            <view class="shop-pay">123人付款</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

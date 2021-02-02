@@ -1,0 +1,146 @@
+<!--template/info/index.wxml-->
+<template name="info">
+  <!-- 顶部导航 -->
+  <view class="headnav">
+    <!-- 循环 -->
+    <view class="headnav-item">
+      <view class="headnav-img">
+        <view class="bubble">佣金</view>
+        <image src="/images/tc.png"></image>
+      </view>
+      <view class="headnav-text">同城悬赏</view>
+    </view>
+    <!-- 循环 -->
+    <navigator url="/pages/shop/index">
+    <view class="headnav-item">
+      <view class="headnav-img">
+        <image src="/images/sc.png"></image>
+      </view>
+      <view class="headnav-text">聚宠商城</view>
+    </view>
+  </navigator>
+    <view class="headnav-item">
+      <view class="headnav-img">
+        <image src="/images/mc.png"></image>
+      </view>
+      <view class="headnav-text">萌宠到家</view>
+    </view>
+    <view class="headnav-item">
+      <view class="headnav-img">
+        <view class="bubble">转发</view>
+        <image src="/images/xc.png"></image>
+      </view>
+      <view class="headnav-text">寻宠启示</view>
+    </view>
+    <view class="headnav-item">
+      <view class="headnav-img">
+        <image src="/images/yq.png"></image>
+      </view>
+      <view class="headnav-text">预产计算</view>
+    </view>
+  </view>
+  <view class="slide-box">
+    <!--幻灯片-->
+    <swiper class="slide" autoplay="true" interval="5000" duration="500" circular="true" indicator-dots="true"
+      indicator-active-color="#fff">
+      <block>
+        <!-- 循环 -->
+        <swiper-item wx:for="{{4}}">
+          <image
+            src='https://imgcps.jd.com/ling4/7338639/5Lqs6YCJ5aW96LSn/5L2g5YC85b6X5oul5pyJ/p-5c11d16482acdd181dbc1fc9/d3dd0afa/cr_1125x445_0_171/s1125x690/q70.jpg'>
+          </image>
+        </swiper-item>
+        <!-- 循环 -->
+      </block>
+    </swiper>
+  </view>
+  <view class="info-list">
+    <view class="left">
+      <!-- 循环 -->
+      <view class="info-item">
+        <navigator url="/pages/info/show">
+        <view class="info-head">
+          <view class="info-img">
+            <image mode="widthFix" src="/images/zhan.jpg"></image>
+          </view>
+          <view class="info-area">
+            <text class="iconfont icon-weizhi"></text>
+            <text class="info-dis">1000km</text> |
+            <text class="info-place">杭州</text>
+          </view>
+        </view>
+        </navigator>
+        <view class="info-main">
+          <view class="info-content">
+            <taxt class="info-category">萌宠找家</taxt>
+            出售3个月拉布拉多，公母均有 欢迎上门选购
+          </view>
+          <view class="info-centre">
+            <view class="info-price">
+              <taxt>￥</taxt>1000
+            </view>
+            <view class="info-Collection">123人想要</view>
+          </view>
+        </view>
+        <view class="info-footer">
+          <view class="info-left">
+            <navigator url="../space/index">
+            <view class="info-avatar">
+              <image mode="aspectFill" src="/images/zhan.jpg"></image>
+            </view>
+            </navigator>
+            <view class="info-nickName">DY.锋</view>
+          </view>
+          <view class="info-like">
+            <text class="iconfont icon-sandian-copy"></text>
+          </view>
+        </view>
+      </view>
+      <!-- 循环 -->
+    </view>
+    <view class="right">
+      <!-- 循环 -->
+      <view class="info-item">
+        <view class="info-head">
+          <view class="info-video">
+							<video src="{{item.video_path}}" binderror="videoErrorCallback"
+								controls="{{controls}}" custom-cache="{{cache}}" object-fit='cover' show-center-play-btn="{{playBtn}}"
+								autoplay='{{false}}'></video>
+							<view class="iconfont icon-video icon-bofang" wx:if='{{item.file_id!=fileIdCurrent}}'
+								data-file_id="{{item.file_id}}" data-Listh="{{item.list_h}}" data-itemH="{{item.itemHeight}}"
+								bindtap="playVideo"></view>
+					</view>
+          <view class="info-area">
+            <text class="iconfont icon-weizhi"></text>
+            <text class="info-dis">1000km</text> |
+            <text class="info-place">杭州</text>
+          </view>
+        </view>
+        <view class="info-main">
+          <view class="info-content">
+            <taxt class="info-category">萌宠找家</taxt>
+            出售3个月拉布拉多，公母均有 欢迎上门选购
+          </view>
+          <view class="info-centre">
+            <view class="info-price">
+              <taxt>￥</taxt>1000
+            </view>
+            <view class="info-Collection">123人想要</view>
+          </view>
+        </view>
+        <view class="info-footer">
+          <view class="info-left">
+            <view class="info-avatar">
+              <image mode="aspectFill" src="/images/zhan.jpg"></image>
+            </view>
+            <view class="info-nickName">DY.锋</view>
+          </view>
+          <view class="info-like">
+            <text class="iconfont icon-sandian-copy"></text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 循环 -->
+  </view>
+</template>

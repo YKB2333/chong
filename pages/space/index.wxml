@@ -1,0 +1,19 @@
+<!--pages/space/index.wxml-->
+<!-- 用户信息 -->
+<view class="user-card">
+  <view class="ty-bg"></view>
+  <view class="user-box">
+    <view class="user-header">
+      <view class="user-avatar">
+        <image mode="aspectFill" src="/images/zhan.jpg"></image>
+      </view>
+      <view class="user-c">
+        <view class="user-username">记忆代码</view>
+        <view class="user-uid">uid:451237</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="main">
+  
+</view>

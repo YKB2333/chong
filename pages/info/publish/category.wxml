@@ -1,0 +1,76 @@
+<!--pages/info/publish/category.wxml-->
+<view class="container p-bottom">
+	<view class="info-creat">
+		<view class="create-content">
+			<!-- 内容 -->
+			<textarea bindinput="inputData" data-key="title" value="{{infoData.title}}" maxlength="2000" placeholder="按对应分类发布内容…" placeholderStyle="color:#ccc"></textarea>
+		</view>
+
+		<view class="image-list">
+			<view class="images-preview" wx:for="{{infoData.imageList}}" wx:key="imgList">
+				<text class="image-delete iconfont icon-shanchu" catchtap="delImage" data-index="{{index}}"></text>
+				<image mode="aspectFill" src="{{item.path}}"></image>
+			</view>
+			<view class="images-picker" bindtap="chooseImage" hidden="{{imgShow}}">
+				<image class="tpsc" src="../../../images/tpsc.png"></image>
+				<view class="choose_text">上传图片</view>
+			</view>
+			<view class="video-preview" wx:if="{{infoData.videoUrl}}">
+				<text class="image-delete iconfont icon-shanchu" catchtap="deleteVideo"></text>
+				<video src="{{infoData.videoUrl}}" class='{{fullScreen?"show":"hide"}}' id="play" class="video" autoplay="true" bindfullscreenchange="fullScreen" controls></video>
+			</view>
+			<!-- 视频上传 -->
+			<view class="images-picker" hidden="{{isVideo}}" bindtap="uploadVideo" wx:else>
+				<image class="tpsc" src="../../../images/spsc.png"></image>
+				<view class="choose_text">上传视频</view>
+			</view>
+		</view>
+	</view>
+</view>
+<view class="tip">请填写真实有效的联系方式，以便联系您！</view>
+
+<view class="form-wapr">
+  <view class="form-group">
+    <view class="form-group-name">选择地址</view>
+    <view class="iconfont icon-gengduo form-group-icon"></view>
+    <view class="form-group-title">
+      浙江省绍兴市
+    </view>
+  </view>
+  <view class="form-group">
+    <view class="form-group-name">联系电话</view>
+    <view class="iconfont icon-gengduo form-group-icon"></view>
+    <view class="form-group-title">
+      13712345678
+    </view>
+  </view>
+  <view class="form-group border-bottom">
+    <view class="form-group-name">微信号码</view>
+    <view class="iconfont icon-gengduo form-group-icon"></view>
+    <view class="form-group-title">
+      123456
+    </view>
+  </view>
+  <view class="form-group border-bottom">
+    <view class="form-group-name">QQ号码</view>
+    <view class="iconfont icon-gengduo form-group-icon"></view>
+    <view class="form-group-title">
+      123456789
+    </view>
+  </view>
+  <navigator url="../publish/parm">
+  <view class="form-group border-bottom">
+    <view class="form-group-name">信息参数</view>
+    <view class="iconfont icon-gengduo form-group-icon"></view>
+    <view class="form-group-title">
+      如：宠物性别、年龄、疫苗状况等
+    </view>
+  </view>
+</navigator>
+</view>
+
+<view class="button">
+	<view class="btn">
+		<view catchtap="submit" disabled="{{disable}}">发布</view>
+	</view>
+</view>

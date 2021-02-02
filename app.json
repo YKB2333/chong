@@ -1,0 +1,58 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/trends/index",
+    "pages/trends/publish/index",
+    "pages/info/index",
+    "pages/info/show",
+    "pages/info/publish/index",
+    "pages/info/publish/category",
+    "pages/info/publish/parm",
+    "pages/shop/index",
+    "pages/shop/publish/index",
+    "pages/friend/index",
+    "pages/space/index",
+    "pages/user/index",
+    "pages/user/member/userdata",
+    "pages/user/member/userset",
+    "pages/logs/logs",
+    "template/follow/index",
+    "template/info/index",
+    "template/trends/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "宠岛",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fbc506",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#474747",
+    "selectedColor": "#1a1a1a",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "宠岛",
+        "iconPath": "images/icon_home.png",
+        "selectedIconPath": "images/icon_home_HL.png"
+      },
+      {
+        "pagePath": "pages/friend/index",
+        "text": "好友",
+        "iconPath": "images/icon_txl.png",
+        "selectedIconPath": "images/icon_txl_HL.png"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "我的",
+        "iconPath": "images/icon_mine.png",
+        "selectedIconPath": "images/icon_mine_HL.png"
+      }
+    ],
+    "position": "bottom"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

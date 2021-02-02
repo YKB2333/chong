@@ -1,0 +1,39 @@
+<!--pages/friend/index.wxml-->
+<!--pages/friend/index.wxml-->
+<view class="header">
+	<view class="search-box">
+		<view class="search">
+			<input type="text" placeholder="请输入搜索内容" />
+		</view>
+	</view>
+</view>
+
+<scroll-view scroll-y class="indexes" scroll-into-view="indexes-{{listCurID}}" style="height:calc(100vh - {{CustomBar}}px - 50px)" scroll-with-animation="true" enable-back-to-top="true">
+  <block wx:for="{{list}}" wx:key>
+    <view class="padding indexItem-{{list[index]}}" id="indexes-{{list[index]}}" data-index="{{list[index]}}">{{list[index]}}</view>
+    <view class="cu-list menu-avatar no-padding">
+      <view class="cd-item" wx:for="{{2}}" wx:key wx:for-index="sub">
+        <view class="cd-avatar">
+          <image mode="aspectFill" src="https://thirdwx.qlogo.cn/mmopen/vi_32/kZMvJSxM5wWhf6secnGCDKlApj7yDJicXhfFt8ysLeuydzicTbEAj9nQh8z51VIyewXhuicep3diarvmiaqfy3DwYJQ/132"></image>
+        </view>
+        <view class="cd-centre">
+          <view class="cd-nickname">
+            <text>记忆代码</text>
+          </view>
+          <view class="cd-intro">
+            信息：出售3个月阿拉斯加 公母均有
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</scroll-view>
+<view class="indexBar" style="height:calc(100vh - {{CustomBar}}px - 50px)">
+  <view class="indexBar-box" bindtouchstart="tStart" bindtouchend="tEnd" catchtouchmove="tMove">
+    <view class="indexBar-item" wx:for="{{list}}" wx:key id="{{index}}" bindtouchstart="getCur" bindtouchend="setCur">{{list[index]}}</view>
+  </view>
+</view>
+<!--选择显示-->
+<view hidden="{{hidden}}" class="indexToast">
+  {{listCur}}
+</view>

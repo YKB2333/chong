@@ -1,0 +1,98 @@
+@import 'utils/iconfont.wxss';
+/**app.wxss**/
+page {background: #f5f5f5;font-size: 24rpx;color: #1a1a1a;line-height: 1;font-family: 苹方,San Francisco,Roboto,Noto;}
+view, text, custom, tag, capsule, scroll-view, swiper, button, timeline, form, form-group, info, bar, progress-bar, input, textarea, label, navigator, list, item, chat, image {box-sizing:border-box;}
+@font-face {
+  font-family: 'iconfont';  /* project id 1871685 */
+  src: url('//at.alicdn.com/t/font_1871685_r7a2ywtp1l.eot');
+  src: url('//at.alicdn.com/t/font_1871685_r7a2ywtp1l.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1871685_r7a2ywtp1l.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1871685_r7a2ywtp1l.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1871685_r7a2ywtp1l.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1871685_r7a2ywtp1l.svg#iconfont') format('svg');
+}
+/* 通用背景 */
+.ty-bg ,.shop-bg{background:#fbc506;position: absolute;top: 0;left: -25%;height: 300rpx;width: 150%;border-bottom-left-radius: 100%;border-bottom-right-radius: 100%;z-index: -1;}
+/* 通用模块框 */
+.module {background: #fff;overflow:hidden;padding: 20rpx;margin-bottom: 20rpx;border-radius:20rpx;}
+.module-name {font-weight: bold;margin-bottom: 20rpx;font-size: 26rpx;}
+/*通用表单*/
+.form-wapr {background: #ffffff;padding: 0 20rpx;}
+.form-group {overflow:hidden;line-height: 90rpx;height: 90rpx;border-bottom: 1rpx solid #e6e6e6;}
+.cu-form-group {background-color: var(--white);padding: 1rpx 30rpx;display: flex;align-items: center;min-height: 100rpx;justify-content: space-between;}
+.form-group-name {float: left;font-size: 26rpx;}
+.form-intro-group {overflow:hidden;padding-bottom: 20rpx;}
+.form-group-intro {overflow:hidden;}
+.form-group-number {float: right;font-size: 20rpx;color: #646464;}
+.form-group-title {float: right;}
+.form-group-icon {float: right;margin-left: 20rpx;}
+.form-group-picker {flex: 1;padding-right: 40rpx;overflow: hidden;position: relative;}
+.form-textarea {width: 100%;padding: 20rpx 0;border-bottom: 1rpx solid #e6e6e6;font-size: 26rpx;}
+.form-textarea textarea {height: 4.6em;width: 100%;line-height: 1.2em;}
+.form-group input {flex: 1;color: #646464;padding-right: 20rpx;}
+/* 通用按钮 */
+.button {width: 100%;position: fixed; bottom: 0;z-index: 4999;}
+.btn {background-image: linear-gradient(45deg, #fee000, #fbc506);text-align: center;height: 84rpx;line-height:84rpx;}
+/* 通用 */
+.margin-bottom {margin-bottom: 20rpx;}
+.border-bottom {border-bottom:none!important;}
+/* 通用 */
+.foot {overflow: hidden;margin: 0 30rpx;border-top: 1rpx solid #e6e6e6;border-bottom: 1rpx solid #e6e6e6;padding: 20rpx 0;}
+.foot-left {float: left;width: 10%;}
+.foot-right {float: right;}
+.foot-item {float: left;width: 12.33333%;margin-left: 1%;}
+.foot-likes {font-size: 20rpx;margin-top: 4rpx;}
+.foot-avatar {width: 50rpx;height: 50rpx;border-radius: 50%;}
+.foot-avatar image {width: 100%;height: 100%;border-radius: 50%;}
+.foot-more{background: #f2f2f4;border-radius: 50%;width: 50rpx;height: 50rpx;font-size: 18rpx;line-height: 50rpx;text-align: center;float: right;}
+/* 通用底部 */
+.footer-fixed {bottom:0;background: #fff;width: 100%;height: 90rpx;position: fixed;z-index: 1024;border-top: 1rpx solid #e6e6e6;padding:15rpx 20rpx 0 20rpx;}
+.footer-fixed-l {width: 50%;height: 56rpx;margin-top: 4rpx;float: left;background: #f2f2f4;border-radius: 25rpx;}
+.footer-fixed-l text{line-height: 56rpx;color: #939393;margin-left: 20rpx;font-size: 20rpx;}
+.footer-fixed-r {width: 50%;float: right;overflow:hidden;}
+.footer-fixed-icon {width: 33.333%;float: left;text-align: center;}
+.footer-fixed-icon text{font-size: 18rpx;}
+/* 发布动态 */
+.info-creat  {padding:0 20rpx 20rpx 20rpx;background: #fff;}
+.create-content{padding:20rpx 0;}
+.create-content textarea {width: 100%;height:180rpx;}
+.create-attribute {overflow:hidden;margin: 10rpx 0;height: 40rpx;}
+.create-topic {overflow: hidden;margin-right:20rpx;float: left;}
+.create-topic text{font-size: 20rpx;background:linear-gradient(to right,#FBD343,#f7e5a4);border-radius: 40rpx;padding:10rpx 20rpx;line-height: 40rpx;height: 40rpx;}
+.image-list {overflow:hidden;padding-top: 20rpx;}
+.images-picker {display: block;position: relative;float: left;width: 32%;height: 0;padding-bottom: 32.5%;margin-right: 1.335%;overflow: hidden;margin-bottom: 1.335%;border:1rpx solid #c8c8c8;}
+.tpsc {width: 60rpx;height:60rpx;margin-left:36%;margin-top: 30%;}
+.choose_text  {width: 100%;float: left;text-align: center;color:#ccc;font-size: 24rpx;}
+.images-picker:last-child{margin-right: 0;}
+.image-delete {float: right;width: 25rpx;height: 25rpx;position:relative;z-index:1;background: #000;color: #fff;padding: 2rpx;}
+.images-preview {display: block;position: relative;float: left;width: 32%;height: 0;padding-bottom: 32.5%;margin-right: 1.335%;overflow: hidden;margin-bottom: 1.335%;}
+.images-preview:last-child{margin-right: 0;}
+.images-preview image {position: absolute;width: 100%;height: 100%;}
+
+
+.video-preview {display: block;position: relative;float: left;width: 100%;height: 66%;overflow: hidden;margin-bottom: 1.335%;}
+.video-preview image {position: absolute;width: 100%;height: 100%;}
+video {width:100%;}
+.tip {padding:20rpx;color: #ff2d33;font-size:24rpx;}
+.form-wapr {padding:0 20rpx;background: #ffffff;margin-bottom: 20rpx;}
+.form-border-top {border-top: 1rpx solid #e6e6e6;}
+
+
+/* 通用评论 */
+.comment {background: #fff;padding: 30rpx;margin-bottom: 100rpx;    z-index: 1;}
+.comment-lm {height: 80rpx;line-height: 80rpx;}
+.comment-name {font-size: 30rpx;font-weight: bold;}
+.comment-name text{font-size: 24rpx;font-weight:normal;color: #939393;}
+.comment-bg {padding: 20rpx;}
+.comment-bg view{width: 300rpx;margin: 0 auto;}
+.comment-bg view image{width: 100%;}
+.comment-item {padding: 20rpx 0;display: flex;border-bottom: 1rpx solid #e6e6e6;}
+.comment-left {margin-right: 20rpx;}
+.comment-right {width: 100%;}
+.comment-avatar {float: left;width: 60rpx;height: 60rpx;border-radius: 50%;}
+.comment-avatar image{width:100%;height:100%;border-radius: 50%;}
+.comment-username {height: 60rpx;line-height: 60rpx;font-weight: bold;display: flex;}
+.comment-cont {line-height: 28rpx;padding: 20rpx 0;border-bottom: 1rpx solid #e6e6e6;}
+.comment-foot {margin-top: 20rpx;color: #939393;font-size:20rpx;}
+.comment-reply-gd {float: right;}
+.comment-reply {margin: 20rpx 10rpx;color: #fc2b79;}

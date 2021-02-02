@@ -1,0 +1,19 @@
+/* template/follow/index.wxss */
+/* 关注列表 */
+.follow-list {padding: 20rpx 30rpx;}
+.follow-item {background:#FFFFFF;padding:30rpx 20rpx;margin-bottom: 20rpx;overflow: hidden;border-radius: 20rpx;}
+.follow-head {margin-bottom: 25rpx;overflow: hidden;}
+.follow-logo {float: left;margin-right: 20rpx;width: 70rpx;height: 70rpx;}
+.follow-logo image {width: 100%;height: 100%;border-radius: 50%;}
+.follow-centre {float: left;}
+.follow-right {float: right;}
+.follow-right-button {margin-top: 14rpx;font-weight: 600;border-radius: 20rpx;font-size: 20rpx;height: 40rpx;line-height: 40rpx;padding: 0 20rpx;}
+.button-yellow {border: 1rpx solid #ffcf40;background: #f7e6b6;color: #ffbf00;}
+.button-blue {border: 1rpx solid #4671d5;background: #c8d6f7;color: #1240ab;}
+.button-red {border: 1rpx solid #f23c73;background: #fdc8d8;color: #E40045;}
+.follow-name {height: 40rpx;line-height: 40rpx;font-weight: 600;}
+.follow-brand {font-size: 20rpx;color: #939393;height: 30rpx;line-height: 30rpx;}
+.follow-wrap{width: 100%;overflow: hidden;white-space: nowrap;}
+.scroll_box scroll-view{height: 100%;width: auto;overflow:hidden;}
+.follow-img {width: 160rpx;height: 160rpx;display: inline-block;overflow: hidden;border-radius: 10rpx;margin-right:10rpx;}
+.follow-img image {width: 100%;height: 100%;border-radius: 10rpx;}

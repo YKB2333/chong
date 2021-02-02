@@ -1,0 +1,48 @@
+/* pages/info/publish/parm.wxss */
+.parm {background: #fff;padding: 0rpx;margin-bottom: 20rpx;overflow:hidden;}
+.parm-item {overflow:hidden;padding: 20rpx;}
+.parm-name {font-size: 28rpx;font-weight: bold;margin-bottom: 20rpx;width: 100%;}
+.parm-list {float: left;width: 100%;}
+.parm-list text {background: #f2f2f2;border-radius:10rpx;margin:20rpx 10rpx;float: left;width: 30%;text-align: center;height:70rpx;line-height: 70rpx;}
+.choose {color: #ff2d33;font-weight: bold;}
+.parm-list input {background: #f2f2f2;border-radius:10rpx;padding: 10rpx 20rpx;margin: 0 10rpx;text-align: left;height:70rpx;line-height: 70rpx;}
+
+.button {background: #fff;padding: 20rpx 60rpx;}
+.btn {border-radius:10rpx;}
+
+
+/*灰色列表  */
+.typelist{
+  position: relative;
+  background-color: #f2f2f2;
+  height: 44px;
+  line-height: 44px;
+  width: 630rpx;
+  height: 100%;
+  margin: 0 auto; 
+  margin-top: 10px;
+  border-radius: 10rpx;
+  padding: 0 30rpx; 
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+/*选中样式  */
+.selected{
+  opacity: 1;
+  color: #fff;
+  z-index: 10;
+}
+/*scroll下移  */
+.searchbar-result{
+  position: absolute;
+  transition-duration: .8s;
+  -webkit-transition-duration: .8s;
+}
+.animation{
+  opacity: 0.6;
+  background-color: #09bb07; 
+  transition-duration: .8s;
+  -webkit-transition-duration: .8s;
+}
