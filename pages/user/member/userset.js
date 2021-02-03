@@ -8,7 +8,7 @@ Page({
     showAccountPopup: false,
     account: '451237',
     inputAccount: '',
-    showPwdPopup: true,
+    showPwdPopup: false,
     pwd: '451237',
     inputPwd: '',
   },
