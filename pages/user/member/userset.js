@@ -52,13 +52,13 @@ Page({
   },
   openPopup(e) {
     let type = e.currentTarget.dataset.type
-    if (type === 'name') {
+    if (type === 'account') {
       this.setData({
-        showNamePopup: true
+        showAccountPopup: true
       })
-    } else if (type === 'time') {
+    } else if (type === 'pwd') {
       this.setData({
-        showTimePopup: true
+        showPwdPopup: true
       })
     } else if (type === 'sex') {
       this.setData({

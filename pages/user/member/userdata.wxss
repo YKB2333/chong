@@ -32,6 +32,7 @@
 }
 
 .name-box {
+    width: 600rpx;
     background-color: rgb(240, 240, 242);
     padding: 40rpx 0 0;
     border-radius: 20rpx;

@@ -1,13 +1,13 @@
 <!--pages/user/member/userset.wxml-->
 <view class="form-wapr margin-bottom">
-  <view class="form-group">
+  <view class="form-group" data-type="account" bindtap="openPopup">
     <view class="form-group-name">帐号</view>
     <view class="iconfont icon-gengduo form-group-icon"></view>
     <view class="form-group-title">
       <text>{{account}}</text>
     </view>
   </view>
-  <view class="form-group border-bottom">
+  <view class="form-group border-bottom" data-type="pwd" bindtap="openPopup">
     <view class="form-group-name">密码</view>
     <view class="iconfont icon-gengduo form-group-icon"></view>
     <view class="form-group-title">
@@ -53,7 +53,7 @@
 
 <van-popup custom-style="border-radius:20rpx;" data-type="pwd" show="{{ showPwdPopup }}" bindtap="onClickOverlay">
   <view class="pwd-box" catchtap="onClickAccountBox">
-    <input type="password" class="account_input" bindinput="memberPwdInput" placeholder="新输入新密码" value="{{inputPwd}}" />
+    <input type="password" class="account_input" bindinput="memberPwdInput" placeholder="请输入新密码" value="{{inputPwd}}" />
     <view class="btn-box">
       <view data-type="pwd" bindtap="onClickOverlay" style="border-right:1rpx solid rgb(199, 199, 199);">
         取消

@@ -1,6 +1,6 @@
 /* pages/user/member/userset.wxss */
 .account-box,.pwd-box {
-  width: 500rpx;
+  width: 600rpx;
   background-color: rgb(240, 240, 242);
   padding: 40rpx 0 0;
   border-radius: 20rpx;
