@@ -1,4 +1,4 @@
-<!--pages/user/member/userdata.wxml-->
+<!-- pages/user/member/userdata.wxml -->
 <view class="form-wapr">
   <view class="form-group" bindtap="uploadheadImg">
     <view class="form-group-name">头像</view>
@@ -7,32 +7,30 @@
       <image mode="aspectFill" src="{{headImgPath}}"></image>
     </view>
   </view>
-  <view class="form-group" bindtap="updateName">
+  <view class="form-group" data-type="name" bindtap="openPopup">
     <view class="form-group-name">昵称</view>
     <view class="iconfont icon-gengduo form-group-icon"></view>
     <view class="form-group-title">
       <text>{{name || '默认'}}</text>
     </view>
   </view>
-  <view class="form-group">
+  <view class="form-group" data-type="sex" bindtap="openPopup">
     <view class="form-group-name">性别</view>
     <view class="iconfont icon-gengduo form-group-icon"></view>
-    <view class="form-group-title">
-      {{sex || '无'}}
-    </view>
+    <view class="form-group-title">{{sex || '无'}}</view>
   </view>
-  <view class="form-group">
+  <view class="form-group" data-type="time" bindtap="openPopup">
     <view class="form-group-name">生日</view>
     <view class="iconfont icon-gengduo form-group-icon"></view>
-    <view class="form-group-title">
-      1990-04-22
-    </view>
+    <view class="form-group-title">{{date || '1990-04-22'}}</view>
   </view>
   <view class="form-group">
     <view class="form-group-name">城市</view>
     <view class="iconfont icon-gengduo form-group-icon"></view>
     <view class="form-group-title">
-      浙江 绍兴
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        {{region[0]+region[1]+region[2] || '浙江 绍兴' }}
+      </picker>
     </view>
   </view>
   <view class="form-intro-group">
@@ -45,28 +43,26 @@
     </view>
   </view>
 </view>
-<van-popup custom-style="border-radius:20rpx;" show="{{ showNamePopup }}" bindtap="onClickOverlay" >
+<van-popup custom-style="border-radius:20rpx;" data-type="name" show="{{ showNamePopup }}" bindtap="onClickOverlay">
   <view class="name-box" catchtap="onClickNameBox">
     <view class="name-title">修改昵称</view>
     <view class="name-warn">敬告：修改昵称有60天间隔哦</view>
-    <input class="name_input" bindinput="memberAccountInput" placeholder="新昵称" value="{{inputName}}" />
+    <input class="name_input" bindinput="memberNameInput" placeholder="新昵称" value="{{inputName}}" />
     <view class="btn-box">
-      <view bindtap="onClickOverlay" style="border-right:1rpx solid rgb(199, 199, 199);">取消</view>
+      <view data-type="name" bindtap="onClickOverlay" style="border-right:1rpx solid rgb(199, 199, 199);">
+        取消
+      </view>
       <view bindtap="onComfirmName">确认</view>
     </view>
   </view>
 </van-popup>
-<van-action-sheet
-  show="{{ showSexPopup }}"
-  actions="{{ actions }}"
-  cancel-text="取消"
-  z-index="9999"
-  title="修改性别"
-  bind:cancel="onCancelSex"
-  bind:select="onSelectSex"
-/>
+
+<van-action-sheet show="{{ showSexPopup }}" actions="{{ actions }}" cancel-text="取消" z-index="9999" title="修改性别" bind:cancel="onCancelSex" bind:select="onSelectSex" bind:close="onCancelSex"/>
+<van-popup z-index="9999" position="bottom" custom-style="border-radius:20rpx 20rpx 0 0;" show="{{ showTimePopup }}" data-type="time" bindtap="onClickOverlay">
+  <van-picker type="date" value="{{ currentDate }}" bind:confirm="onDateConfirm" min-date="{{ minDate }}" />
+</van-popup>
 <view class="button">
   <view class="btn">
-    <view catchtap="submit" disabled="{{disable}}">提交保存</view>
+    <view data-type="save" catchtap="openPopup" disabled="{{disable}}">提交保存</view>
   </view>
 </view>

@@ -40,7 +40,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.14.0",
 	"appid": "wx188622c858cf0ed7",
-	"projectname": "%E5%AE%A0%E5%B2%9B%E5%89%8D%E7%AB%AF",
+	"projectname": "chong",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
@@ -70,6 +70,20 @@
 					"id": -1,
 					"name": "pages/user/member/userdata",
 					"pathName": "pages/user/member/userdata",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user/member/userdata",
+					"pathName": "pages/user/member/userdata",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user/member/userset",
+					"pathName": "pages/user/member/userset",
 					"scene": null
 				}
 			]

@@ -1,1 +1,51 @@
 /* pages/user/member/userset.wxss */
+.account-box,.pwd-box {
+  width: 500rpx;
+  background-color: rgb(240, 240, 242);
+  padding: 40rpx 0 0;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+
+.account-title,.pwd-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+}
+
+.account-warn,.pwd-warn {
+  padding: 0 80rpx;
+  text-align: center;
+  white-space: nowrap;
+  margin-bottom: 40rpx;
+}
+
+.account_input,.pwd_input {
+  height: 80rpx;
+  margin: 0 auto;
+  width: 80%;
+  padding: 0 20rpx;
+  border: 2rpx solid rgb(199, 199, 199);
+  border-radius: 14rpx;
+}
+
+.btn-box {
+  display: flex;
+  height: 80rpx;
+  border-top: 1rpx solid rgb(199, 199, 199);
+  margin-top: 40rpx;
+}
+
+.btn-box view {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  width: 50%;
+  color: rgb(48, 114, 245);
+}
+
+.color-blue {
+  color: rgb(48, 114, 245);
+  font-weight: 400;
+}

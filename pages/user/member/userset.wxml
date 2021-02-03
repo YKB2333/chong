@@ -4,7 +4,7 @@
     <view class="form-group-name">帐号</view>
     <view class="iconfont icon-gengduo form-group-icon"></view>
     <view class="form-group-title">
-      <text>451237</text>
+      <text>{{account}}</text>
     </view>
   </view>
   <view class="form-group border-bottom">
@@ -39,8 +39,32 @@
   </view>
 </view>
 
+<van-popup custom-style="border-radius:20rpx;" data-type="account" show="{{ showAccountPopup }}" bindtap="onClickOverlay">
+  <view class="account-box" catchtap="onClickAccountBox">
+    <input class="account_input" bindinput="memberAccountInput" placeholder="新昵称" value="{{inputAccount}}" />
+    <view class="btn-box">
+      <view data-type="account" bindtap="onClickOverlay" style="border-right:1rpx solid rgb(199, 199, 199);">
+        取消
+      </view>
+      <view bindtap="onComfirmAccount">确认</view>
+    </view>
+  </view>
+</van-popup>
+
+<van-popup custom-style="border-radius:20rpx;" data-type="pwd" show="{{ showPwdPopup }}" bindtap="onClickOverlay">
+  <view class="pwd-box" catchtap="onClickAccountBox">
+    <input type="password" class="account_input" bindinput="memberPwdInput" placeholder="新输入新密码" value="{{inputPwd}}" />
+    <view class="btn-box">
+      <view data-type="pwd" bindtap="onClickOverlay" style="border-right:1rpx solid rgb(199, 199, 199);">
+        取消
+      </view>
+      <view bindtap="onComfirmPwd">确认</view>
+    </view>
+  </view>
+</van-popup>
+
 <view class="button">
   <view class="btn">
-    <view catchtap="submit" disabled="{{disable}}">提交保存</view>
+    <view data-type="save" catchtap="openPopup" disabled="{{disable}}">提交保存</view>
   </view>
 </view>

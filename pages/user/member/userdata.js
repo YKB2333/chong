@@ -11,15 +11,22 @@ Page({
         inputName: '',
         sex: '',
         actions: [{
-                name: '男',
-                className: 'color-blue'
-            },
-            {
-                name: '女',
-                className: 'color-blue'
-            }
+            name: '男',
+            className: 'color-blue'
+        },
+        {
+            name: '女',
+            className: 'color-blue'
+        }
         ],
-        showSexPopup: true,
+        showSexPopup: false,
+        showTimePopup: false,
+        currentDate: new Date().getTime(),
+        minDate: new Date().getTime(),
+        date: null,
+        showCityPopup: true,
+        region: ['广东省', '广州市', '海珠区'],
+        customItem: '全部',
     },
     uploadheadImg() {
         console.log(6366)
@@ -84,21 +91,49 @@ Page({
             // }
         })
     },
-    memberAccountInput(e) {
+    memberNameInput(e) {
         this.setData({
             inputName: e.detail.value
         })
     },
-    //修改昵称
-    updateName() {
-        this.setData({
-            showNamePopup: true
-        })
+    openPopup(e) {
+        let type = e.currentTarget.dataset.type
+        if (type === 'name') {
+            this.setData({
+                showNamePopup: true
+            })
+        } else if (type === 'time') {
+            this.setData({
+                showTimePopup: true
+            })
+        } else if (type === 'sex') {
+            this.setData({
+                showSexPopup: true
+            })
+        } else if (type === 'save') {
+            wx.showModal({
+                content: '确认保存吗',
+                success(res) {
+                    if (res.confirm) {
+                        console.log('用户点击确定')
+                    } else if (res.cancel) {
+                        console.log('用户点击取消')
+                    }
+                }
+            })
+        }
     },
-    onClickOverlay() {
-        this.setData({
-            showNamePopup: false
-        })
+    onClickOverlay(e) {
+        let type = e.currentTarget.dataset.type
+        if (type === 'name') {
+            this.setData({
+                showNamePopup: false
+            })
+        } else if (type === 'time') {
+            this.setData({
+                showTimePopup: false
+            })
+        }
     },
     onClickNameBox() {
 
@@ -121,59 +156,97 @@ Page({
             showSexPopup: false
         })
     },
+    onDateConfirm(event) {
+        console.log(this.formatTime(event.detail, 'Y-M-D'))
+        this.setData({
+            date: this.formatTime(event.detail, 'Y-M-D'),
+            currentDate: this.formatTime(event.detail, 'Y-M-D'),
+        });
+    },
+    formatTime(timestap, format) {
+        if (!timestap) {
+            return ''
+        }
+        var formateArr = ['Y', 'M', 'D', 'h', 'm', 's'];
+        var returnArr = [];
+
+        var date = new Date(timestap);
+        returnArr.push(date.getFullYear());
+        returnArr.push(this.formatNumber(date.getMonth() + 1));
+        returnArr.push(this.formatNumber(date.getDate()));
+
+        returnArr.push(this.formatNumber(date.getHours()));
+        returnArr.push(this.formatNumber(date.getMinutes()));
+        returnArr.push(this.formatNumber(date.getSeconds()));
+        for (var i in returnArr) {
+            format = format.replace(formateArr[i], returnArr[i]);
+        }
+        return format;
+    },
+    //数据转化  
+    formatNumber(n) {
+        n = n.toString()
+        return n[1] ? n : '0' + n
+    },
+    bindRegionChange: function (e) {
+        console.log('picker发送选择改变，携带值为', e.detail.value)
+        this.setData({
+            region: e.detail.value
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function(options) {
+    onLoad: function (options) {
 
     },
 
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function() {
+    onReady: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function() {
+    onShow: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面隐藏
      */
-    onHide: function() {
+    onHide: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function() {
+    onUnload: function () {
 
     },
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function() {
+    onPullDownRefresh: function () {
 
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
-    onReachBottom: function() {
+    onReachBottom: function () {
 
     },
 
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage: function() {
+    onShareAppMessage: function () {
 
     }
 })
